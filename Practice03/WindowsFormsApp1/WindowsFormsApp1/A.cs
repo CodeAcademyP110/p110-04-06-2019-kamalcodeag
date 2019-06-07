@@ -25,8 +25,9 @@ namespace WindowsFormsApp1
 
     public class B
     {
-        public string Name;
-        public string Surname;
-
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        //public string Name;
+        //public string Surname;
     }
 }
