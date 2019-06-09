@@ -8,7 +8,7 @@ namespace WindowsFormsApp1
 {
     class Device
     {
-        private int id { get; set; } = 1;
+        private static int id { get; set; } = 1;
         public string ID { get; set; }
         public string Name { get; set; }
         public Category category { get; set; }

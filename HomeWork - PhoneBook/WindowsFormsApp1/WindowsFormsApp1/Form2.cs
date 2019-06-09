@@ -27,15 +27,17 @@ namespace WindowsFormsApp1
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(comboBox1.Text);
-            PhoneBook.RemoveContact(comboBox1.Text);
-            comboBox1.Items.Clear();
-            foreach (var contact in PhoneBook.GetContact())
+            DialogResult result = MessageBox.Show("Silməyə əminsinizmi ?", "Təsdiq", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if(result == DialogResult.Yes)
             {
-                comboBox1.Items.Add(contact.Key);
+                PhoneBook.RemoveContact(comboBox1.SelectedItem.ToString());
+                comboBox1.Items.Clear();
+                foreach (var contact in PhoneBook.GetContact())
+                {
+                    comboBox1.Items.Add(contact.Key);
+                }
+                MessageBox.Show("Silindi");
             }
         }
-
-        
     }
 }

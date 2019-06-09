@@ -61,10 +61,5 @@ namespace WindowsFormsApp1
         {
             contacts.Remove(name);
         }
-
-
-
     }
-
-
 }
